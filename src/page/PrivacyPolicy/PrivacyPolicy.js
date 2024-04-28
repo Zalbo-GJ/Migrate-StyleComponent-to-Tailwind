@@ -1,8 +1,10 @@
-const TermsOfService = () => {
+const PrivacyPolicy = () => {
   return (
     <div className=" max-w-[800px] justify-center text-darkGray box-border flex flex-col my-[100px] mx-auto">
       <div className=" text-center">
-        <h1 className=" text-[3rem] font-bold my-4 ">Termini di Servizio</h1>
+        <h1 className=" text-[3rem] font-bold my-4 ">
+          Informativa sulla Privacy
+        </h1>
         <h2 className="my-[5px] text-[1.5em] font-bold">
           Entrata in vigore: 30 ottobre 2019
         </h2>
@@ -77,4 +79,4 @@ const TermsOfService = () => {
     </div>
   );
 };
-export default TermsOfService;
+export default PrivacyPolicy;

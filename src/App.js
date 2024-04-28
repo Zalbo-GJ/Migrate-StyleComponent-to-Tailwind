@@ -7,10 +7,11 @@ import { Layout, Footer, Helmet, InnerLayout, Navbar } from "./components";
 // import { ThemeContext } from "./context";
 import { Main, ContactUs } from "./page";
 
-
 import { title } from "./utils/content";
 import { light } from "./utils/colors";
 import "./index.css";
+import TermsOfService from "./page/TermsOfService/TermsOfService";
+import PrivacyPolicy from "./page/PrivacyPolicy/PrivacyPolicy";
 
 const initialTheme = localStorage.getItem("theme") || "light";
 
@@ -38,13 +39,9 @@ const App = () => {
         <Navbar />
         <InnerLayout>
           <Switch>
-            {/* <Route
-                path="/terms-of-service"
-                component={TermsOfService}
-                exact
-              />
-              <Route path="/privacy-policy" component={PrivacyPolicy} exact /> */}
-              <Route path="/contact-us" component={ContactUs} exact />
+            <Route path="/terms-of-service" component={TermsOfService} exact />
+            <Route path="/privacy-policy" component={PrivacyPolicy} exact />
+            <Route path="/contact-us" component={ContactUs} exact />
             <UnAuthenticatedRoute path="/" component={Main} exact />
           </Switch>
         </InnerLayout>
