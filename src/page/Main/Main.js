@@ -8,7 +8,7 @@ import ThirdContent from "./ThirdContent";
 const Main = () => {
   return (
     <div>
-      <div className="max-w-1200px mx-auto md:mx-75px " >
+      <div className="max-w-[1200px] mx-auto md:mx-[75px] " >
         <HeadContent />
         <SecondContent />
         <ThirdContent />

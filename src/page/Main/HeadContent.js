@@ -6,7 +6,7 @@ import { homepage } from "../../utils/content";
 const HeadContent = () => {
   return (
     <div className="flex justify-between">
-      <div className="max-w-530px relative" key="content1">
+      <div className="max-w-[530px] relative" key="content1">
         <div className="font-semibold text-5xl leading-6 md:text-7xl md:leading-8 mb-4 text-black mt-16">
           {homepage.headers.first.part1}
           <span> {homepage.headers.first.part2}</span>
@@ -33,18 +33,18 @@ const HeadContent = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-530px relative" key="content2">
-        <div className="w-96 h-96 bg-gradient-to-br from-yellow-300 to-red-500 rounded-full"></div>{" "}
+      <div className="max-w-[530px] relative" key="content2">
+        <div className="w-[527px] h-[527px] bg-gradient-to-br from-yellow-300 to-red-500 rounded-full"></div>
         <img
           src={HomeIntroScreen2}
           alt="Mobile chat screen 2"
-          className="w-56 h-121 absolute top-[18px] left-[206px] rounded-lg shadow-lg"
-        />{" "}
+          className="w-[227px] h-[ 493px] absolute top-[18px] left-[206px] rounded-lg shadow-lg"
+        />
         <img
           src={HomeIntroScreen1}
           alt="Mobile chat screen 1"
-          className="w-68 h-146 absolute top-[29px] left-[92px] rounded-lg shadow-lg"
-        />{" "}
+          className="w-[270px] h-[585px] absolute top-[29px] left-[92px] rounded-lg shadow-lg"
+        />
       </div>
     </div>
   );

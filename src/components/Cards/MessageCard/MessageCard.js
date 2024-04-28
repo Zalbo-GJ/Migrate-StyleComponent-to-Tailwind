@@ -8,7 +8,7 @@ const MessageCard = ({ header, messages, color }) => {
   const pillTextColor = "text-white";
 
   return (
-    <div className={`w-80 md:w-96 h-64 rounded-3xl flex flex-col justify-center items-center p-10 ${cardBgColor}`}>
+    <div className={`w-[524px] md:w-96 h-64 rounded-3xl flex flex-col justify-center items-center p-10 ${cardBgColor}`}>
       <h2 className={`font-medium text-lg md:text-xl text-center mb-6 ${headerColor}`}>{header}</h2>
       {messages.map(({ avatar, message, position }, i) => (
         <div key={`${i}-message-${color}`} className={`flex items-center justify-${position === "right" ? "end" : "start"} mb-4`}>
