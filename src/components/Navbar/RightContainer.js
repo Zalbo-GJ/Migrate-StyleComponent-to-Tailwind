@@ -19,6 +19,7 @@ const NavRightContainer = () => {
             // onClick={(e) => e.stopPropagation()}
           />
         </Link>
+        
         </div>
       <div key="loginButton" className={`relative ${true ? 'm-0' : 'm-auto mr-6'} flex text-base font-semibold tracking-wider font-${font.fontFamily} text-link cursor-pointer animate-none`}>
 

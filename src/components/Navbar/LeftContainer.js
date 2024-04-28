@@ -26,6 +26,7 @@ const NavLeftContainer = () => {
       ))}
     </div>
   );
+  
 };
 
 export default NavLeftContainer;

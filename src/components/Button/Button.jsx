@@ -23,6 +23,7 @@ const Button = ({
   let backgroundColorClass = "";
   let textColorClass = "";
   let borderColorClass = "";
+  
 
   switch (buttonType) {
     case "ghost":

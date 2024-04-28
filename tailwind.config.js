@@ -22,6 +22,7 @@ module.exports = {
 
       orange: "#F8AC1A",
 
+      
       purple: "#cf54cf",
 
       success: "#43b581",
