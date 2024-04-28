@@ -7,7 +7,7 @@ const HeadContent = () => {
   return (
     <div className="flex justify-between">
       <div className="max-w-[530px] relative" key="content1">
-        <div className="font-semibold text-5xl leading-6 md:text-7xl md:leading-8 mb-4 text-black mt-16">
+        <div className="font-semibold text-8xl leading-6 md:text-7xl md:leading-8 mb-4 text-black mt-16">
           {homepage.headers.first.part1}
           <span> {homepage.headers.first.part2}</span>
         </div>
