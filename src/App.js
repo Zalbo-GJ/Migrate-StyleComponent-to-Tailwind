@@ -1,19 +1,58 @@
-import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import ContactUs from "./page/ContactUs/ContactUs";
-import Footer from "./components/Footer/Footer";
-import Main from "./page/Main/Main";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import { UnAuthenticatedRoute } from "./route";
+// import { Main, TermsOfService, PrivacyPolicy, ContactUs } from "./page";
+import { Layout, Footer, Helmet, InnerLayout, Navbar } from "./components";
+// import { ThemeContext } from "./context";
+import { Main } from "./page";
+
+import { title } from "./utils/content";
+import { light } from "./utils/colors";
+import './index.css';
+
+
+const initialTheme = localStorage.getItem("theme") || "light";
+
+const App = () => {
+  // const [theme, setTheme] = useState(initialTheme);
+  // const [themeColors] = useState({ light });
+
+  // const changeTheme = (value) => {
+  //   setTheme(value);
+  //   localStorage.setItem("theme", value);
+  // };
+
   return (
-    <div className="App">
-      <Navbar />
-      <ContactUs />
-    <Main />
-    <Footer/>
-    
-    </div>
+    // <ThemeContext.Provider
+    //   value={{
+    //     theme,
+    //     themeColors,
+    //     setTheme: changeTheme,
+    //     getColor: (type) => themeColors[theme][type],
+    //   }}
+    // >
+      <Router>
+        <Helmet title={title} />
+        <Layout>
+          <Navbar />
+          <InnerLayout>
+            <Switch>
+              {/* <Route
+                path="/terms-of-service"
+                component={TermsOfService}
+                exact
+              />
+              <Route path="/privacy-policy" component={PrivacyPolicy} exact />
+              <Route path="/contact-us" component={ContactUs} exact /> */}
+              <UnAuthenticatedRoute path="/" component={Main} exact />
+            </Switch>
+          </InnerLayout>
+          <Footer />
+        </Layout>
+      </Router>
+    // </ThemeContext.Provider>
   );
-}
+};
 
 export default App;
