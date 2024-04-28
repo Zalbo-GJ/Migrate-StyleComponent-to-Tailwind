@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn {
+    @apply text-white;
+  }
+  .btn2 {
+    @apply text-white;
+  }
+}
