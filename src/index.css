@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* container = contactus container */
+  .contain {
+    @apply max-w-screen-md flex flex-col box-border p-20 my-40 shadow-lightGray shadow-md rounded-md mx-auto;
+  }
+  .H2 {
+    @apply;
+  }
+}
