@@ -5,7 +5,8 @@ import { UnAuthenticatedRoute } from "./route";
 // import { Main, TermsOfService, PrivacyPolicy, ContactUs } from "./page";
 import { Layout, Footer, Helmet, InnerLayout, Navbar } from "./components";
 // import { ThemeContext } from "./context";
-import { Main } from "./page";
+import { Main, ContactUs } from "./page";
+
 
 import { title } from "./utils/content";
 import { light } from "./utils/colors";
@@ -42,8 +43,8 @@ const App = () => {
                 component={TermsOfService}
                 exact
               />
-              <Route path="/privacy-policy" component={PrivacyPolicy} exact />
-              <Route path="/contact-us" component={ContactUs} exact /> */}
+              <Route path="/privacy-policy" component={PrivacyPolicy} exact /> */}
+              <Route path="/contact-us" component={ContactUs} exact />
             <UnAuthenticatedRoute path="/" component={Main} exact />
           </Switch>
         </InnerLayout>
