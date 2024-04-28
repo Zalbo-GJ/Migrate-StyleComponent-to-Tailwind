@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "../Link/Link";
 import font from "../../utils/font";
-import {navbar} from "../../utils/content";
+import { navbar } from "../../utils/content";
 
 const NavLeftContainer = () => {
   return (
@@ -26,7 +26,6 @@ const NavLeftContainer = () => {
       ))}
     </div>
   );
-  
 };
 
 export default NavLeftContainer;
