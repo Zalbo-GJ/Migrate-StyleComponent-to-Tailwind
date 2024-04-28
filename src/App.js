@@ -9,8 +9,7 @@ import { Main } from "./page";
 
 import { title } from "./utils/content";
 import { light } from "./utils/colors";
-import './index.css';
-
+import "./index.css";
 
 const initialTheme = localStorage.getItem("theme") || "light";
 
@@ -32,25 +31,25 @@ const App = () => {
     //     getColor: (type) => themeColors[theme][type],
     //   }}
     // >
-      <Router>
-        <Helmet title={title} />
-        <Layout>
-          <Navbar />
-          <InnerLayout>
-            <Switch>
-              {/* <Route
+    <Router>
+      <Helmet title={title} />
+      <Layout>
+        <Navbar />
+        <InnerLayout>
+          <Switch>
+            {/* <Route
                 path="/terms-of-service"
                 component={TermsOfService}
                 exact
               />
               <Route path="/privacy-policy" component={PrivacyPolicy} exact />
               <Route path="/contact-us" component={ContactUs} exact /> */}
-              <UnAuthenticatedRoute path="/" component={Main} exact />
-            </Switch>
-          </InnerLayout>
-          <Footer />
-        </Layout>
-      </Router>
+            <UnAuthenticatedRoute path="/" component={Main} exact />
+          </Switch>
+        </InnerLayout>
+        <Footer />
+      </Layout>
+    </Router>
     // </ThemeContext.Provider>
   );
 };
