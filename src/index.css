@@ -15,6 +15,6 @@ body {
 @layer components {
   /* container = contactus container */
   .contain {
-    @apply max-w-[800px] flex flex-col box-border border border-lightGray p-20 my-40 shadow-[0_4px_8px_0_#EBEBEB] rounded-md mx-auto;
+    @apply max-w-[800px] justify-center box-border flex flex-col my-[1oopx] mx-auto;
   }
 }
