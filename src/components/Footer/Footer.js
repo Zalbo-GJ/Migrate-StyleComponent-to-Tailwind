@@ -3,11 +3,12 @@ import { withRouter } from "react-router-dom";
 
 import { isActiveLink } from "../../utils/constants";
 import { footer } from "../../utils/content";
+import Link from "../Link/Link";
 
 const Footer = withRouter(() => {
   return (
-    <footer className="box-border border-t border-lightGray h-[55px] py-2 px-[30px] bottom-0 fixed w-full flex bg-white justify-between z-[100]">
-      <div className=" flex my-auto ">
+    <footer className="fixed bottom-0 z-[100] box-border flex h-[55px] w-full justify-between border-t border-lightGray bg-white px-[30px] py-2">
+      <div className=" my-auto flex ">
         <div className=" my-auto mr-[30px] flex text-[14px] font-bold tracking-[0.5px]">
           <div className=" text-gray">{footer.copyright}</div>
         </div>
@@ -16,13 +17,9 @@ const Footer = withRouter(() => {
             className=" my-auto mr-[30px] flex text-[14px] font-bold tracking-[0.5px]"
             key={`innerLink${i}`}
           >
-            <a
-              href={href}
-              active={isActiveLink(href)}
-              className=" hover:text-primary active:text-primary"
-            >
+            <Link to={href} active={isActiveLink(href)}>
               {text}
-            </a>
+            </Link>
           </div>
         ))}
       </div>
@@ -36,7 +33,7 @@ const Footer = withRouter(() => {
             key={`outerLink${i}`}
           >
             <img
-              className=" h-[39px] ml-[10px] cursor-pointer"
+              className=" ml-[10px] h-[39px] cursor-pointer"
               src={icon}
               alt={text}
             />
