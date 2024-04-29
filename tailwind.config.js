@@ -21,6 +21,8 @@ module.exports = {
         purple: "#cf54cf",
         success: "#43b581",
         foregroundPrimary: "#171A1F",
+        cyan: "#B9E0E580",
+        purplebg: "#E3C2E380",
       },
     },
   },

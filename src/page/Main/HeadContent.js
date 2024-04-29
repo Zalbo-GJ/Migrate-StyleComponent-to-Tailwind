@@ -6,12 +6,12 @@ import { homepage } from "../../utils/content";
 const HeadContent = () => {
   return (
     <div className="flex justify-between">
-      <div className="max-w-[530px] relative" key="content1">
-        <div className="font-semibold text-8xl leading-6 md:text-7xl md:leading-8 mb-4 text-black mt-16">
+      <div className="max-w-[530px] relative">
+        <div className=" font-extrabold text-[88px] leading-[91px] my-4 text-black mt-16">
           {homepage.headers.first.part1}
-          <span> {homepage.headers.first.part2}</span>
+          <span className=" color-change"> {homepage.headers.first.part2}</span>
         </div>
-        <div className="text-xl leading-7 text-midLightGray mb-11">
+        <div className=" text-[30px] leading-[46px] text-midLightGray mb-11">
           {homepage.subHeaders.first.part1}
           <br />
           {homepage.subHeaders.first.part2}
@@ -27,23 +27,23 @@ const HeadContent = () => {
               <img
                 src={icon}
                 alt={text}
-                className="h-14 mr-6 cursor-pointer bg-black transition duration-150 ease-in-out rounded-lg"
+                className=" logo-container bg-black h-14 mr-6 cursor-pointer rounded-[10px]"
               />
             </a>
           ))}
         </div>
       </div>
-      <div className="max-w-[530px] relative" key="content2">
-        <div className="w-[527px] h-[527px] bg-gradient-to-br from-yellow-300 to-red-500 rounded-full"></div>
+      <div className="max-w-[530px] relative">
+        <div className="w-[527px] h-[527px] heading-circle  rounded-full"></div>
         <img
           src={HomeIntroScreen2}
           alt="Mobile chat screen 2"
-          className="w-[227px] h-[ 493px] absolute top-[18px] left-[206px] rounded-lg shadow-lg"
+          className="w-[227px] h-[493px] absolute top-[18px] left-[206px] rounded-[19px] overflow-hidden circle-image-2 "
         />
         <img
           src={HomeIntroScreen1}
           alt="Mobile chat screen 1"
-          className="w-[270px] h-[585px] absolute top-[29px] left-[92px] rounded-lg shadow-lg"
+          className="w-[270px] h-[585px] absolute top-[-29px] left-[92px] rounded-[23px] circle-image-1 overflow-hidden"
         />
       </div>
     </div>

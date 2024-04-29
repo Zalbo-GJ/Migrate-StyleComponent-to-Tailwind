@@ -12,9 +12,60 @@ body {
   line-height: normal;
 }
 
-@layer components {
-  /* container = contactus container */
-  .contain {
-    @apply max-w-[800px] justify-center box-border flex flex-col my-[1oopx] mx-auto;
+.logo-container {
+  -webkit-transition: 150ms box-shadow ease;
+  transition: 150ms box-shadow ease;
+}
+
+.color-change {
+  background: -webkit-linear-gradient(-45deg, #24bff2 0%, #2458f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-circle {
+  background: linear-gradient(135deg, #ffc619 0%, #ff7919 100%);
+}
+
+.circle-image-2 {
+  box-shadow: 0px 4.56288px 34.2216px rgba(0, 0, 0, 0.08);
+}
+
+.circle-image-1 {
+  box-shadow: 0px 4.56288px 50.1917px rgba(0, 0, 0, 0.08);
+}
+
+.container-size {
+  @media (max-width: 1300px) {
+    margin: auto 75px;
   }
+}
+
+.second-content-image {
+  box-shadow: 0px 4.70932px 40.5751px rgba(0, 0, 0, 0.1);
+}
+
+.second-content-icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+}
+
+.icons-css svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+}
+
+.icons-css-2 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
 }

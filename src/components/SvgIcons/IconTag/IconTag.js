@@ -29,11 +29,13 @@ const iconsMap = {
 
 const IconTagComponent = ({ icon, label, iconProps, smaller }) => {
   const Icon = iconsMap[icon];
-  const IconTagClass = smaller ? "text-kashmir-blue" : "text-foreground-primary";
-  const IconSizeClass = smaller ? "w-6 h-6" : "w-7 h-7";
+  const IconTagClass = smaller
+    ? "font-normal text-[18px] leading-7 opacity-80 pr-10 pl-9 relative text-kashmirBlue icons-css-2  "
+    : "flex font-medium icons-css text-[18px] leading-7 opacity-80 pr-10 pl-9 relative text-foregroundPrimary justify-center items-center";
+
   return (
-    <div className={`font-medium text-base md:text-lg opacity-80 py-1 px-10 md:px-14 relative ${IconTagClass}`}>
-      <Icon {...iconProps} className={`absolute top-0 left-0 ${IconSizeClass}`} />
+    <div className={`  ${IconTagClass}`}>
+      <Icon {...iconProps} />
       {label}
     </div>
   );

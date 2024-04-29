@@ -8,26 +8,30 @@ const SecondContent = () => {
   const { secondContent } = homepage;
 
   return (
-    <div className="mt-[70px] h-[956px] w-full py-[48px] bg-lighter-blue rounded-[44px]">
-      <h2 className="font-bold text-2xl md:text-4xl text-center mb-4">{secondContent.header2}</h2>
-      <p className="text-lg md:text-xl text-center mb-8">{secondContent.subHeader2}</p>
-      <img src={HomeScreen} alt="Home screen image" className="max-w-[928px] h-auto mx-auto mb-[26px] rounded-[20px] shadow-img overflow-hidden" />
-      <div className="flex justify-center">
-        <IconsContainer icons={secondContent.icons1} />
+    <div className=" mt-[70px] h-[956px] w-full pt-[48px] pb-[50px] bg-lighterBlue rounded-[44px]">
+      <div className=" font-extrabold text-[54px] leading-[64px] mb-1 text-center text-black">
+        {secondContent.header2}
       </div>
-      <div className="flex justify-center">
-        <IconsContainer icons={secondContent.icons2} />
+      <div className=" text-[26px] leading-[46px] text-midLightGray mb-7 text-center">
+        {secondContent.subHeader2}
+      </div>
+      <img
+        className=" max-w-[928px] rounded-[20px] mb-[26px] second-content-image overflow-hidden mx-auto "
+        src={HomeScreen}
+        alt="Home"
+      />
+      <div className="second-content-icon flex justify-center pt-6 pl-[38px] pb-[38]">
+        {secondContent.icons1.map((props, i) => (
+          <Icons.IconTag {...props} key={`secondContent-${i}-icon`} />
+        ))}
+      </div>
+      <div className="second-content-icon flex justify-center pt-6 pl-[38px] pb-[38]">
+        {secondContent.icons2.map((props, i) => (
+          <Icons.IconTag {...props} key={`secondContent-${i}-icon2`} />
+        ))}
       </div>
     </div>
   );
 };
-
-const IconsContainer = ({ icons }) => (
-  <>
-    {icons.map((props, i) => (
-      <Icons.IconTag {...props} key={`secondContent-${i}-icon`} />
-    ))}
-  </>
-);
 
 export default SecondContent;
