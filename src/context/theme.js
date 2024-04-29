@@ -1,6 +1,6 @@
-import { useContext } from 'react';
+import { createContext, useContext } from 'react';
 
-import { ThemeContext } from 'styled-components';
+const ThemeContext = createContext();
 
 const useTheme = () => useContext(ThemeContext);
 
