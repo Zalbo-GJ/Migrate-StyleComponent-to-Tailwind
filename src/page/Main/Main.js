@@ -4,15 +4,12 @@ import HeadContent from "./HeadContent";
 import SecondContent from "./SecondContent";
 import ThirdContent from "./ThirdContent";
 
-
 const Main = () => {
   return (
-    <div>
-      <div className="max-w-[1200px] mx-auto md:mx-[75px] flex-block items-center justify-center" >
-        <HeadContent />
-        <SecondContent />
-        <ThirdContent />
-      </div>
+    <div className="max-w-[1200px] container-size mx-auto">
+      <HeadContent />
+      <SecondContent />
+      <ThirdContent />
     </div>
   );
 };

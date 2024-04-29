@@ -22,8 +22,7 @@ export const footer = {
       icon: Google,
     },
     {
-      text: "Download on app store"
-    ,
+      text: "Download on app store",
       href: "https://www.apple.com/ios/app-store/",
       icon: Apple,
     },

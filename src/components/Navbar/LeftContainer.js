@@ -1,7 +1,5 @@
 import React from "react";
 
-import Link from "../Link/Link";
-import font from "../../utils/font";
 import { navbar } from "../../utils/content";
 
 const NavLeftContainer = () => {
@@ -9,19 +7,21 @@ const NavLeftContainer = () => {
     <div className="flex">
       {navbar.links.map(({ href, icon, text }, i) => (
         <div
-          className={`relative m-auto mr-6
-          h-6
-          flex text-base font-semibold tracking-wider font-${
-            font.fontFamily
-          } text-link cursor-pointer animate-none`}
+          className=" relative mr-[23px] my-[3px] flex text-[14px] font-extrabold tracking-[0.5px] cursor-pointer  "
           key={`links${i}`}
         >
-          <Link  to={href}>
-            <div className="text-3xl leading-11 text-midLightGray mb-44 font-normal flex items-center ">
-              {icon && <img className="mr-2 w-6 " src={icon.Logo} alt={text} />}
+          <a className=" my-auto " href={"/"}>
+            <div className=" text-[24px] my-auto leading-[46px] text-midLightGray font-normal flex  ">
+              {icon && (
+                <img
+                  className="mr-[10px] w-[30px] my-2 "
+                  src={icon.Logo}
+                  alt={text}
+                />
+              )}
               PincoPanco
             </div>
-          </Link>
+          </a>
         </div>
       ))}
     </div>

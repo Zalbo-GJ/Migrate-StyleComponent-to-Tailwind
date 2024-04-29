@@ -2,18 +2,38 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MessageCard = ({ header, messages, color }) => {
-  const cardBgColor = color === "cyan" ? "bg-cyan-light" : color === "purple" ? "bg-purple-light" : "";
-  const headerColor = color === "cyan" ? "text-sky-blue" : color === "purple" ? "text-purple" : "text-lagoon-blue";
-  const pillBgColor = color === "cyan" ? "bg-sky-blue" : color === "purple" ? "bg-purple" : "";
-  const pillTextColor = "text-white";
-
   return (
-    <div className={`w-[524px] md:w-96 h-64 rounded-3xl flex flex-col justify-center items-center p-10 ${cardBgColor}`}>
-      <h2 className={`font-medium text-lg md:text-xl text-center mb-6 ${headerColor}`}>{header}</h2>
+    <div
+      className={`w-[524px] h-[300px] rounded-[32px] flex px-10 justify-center flex-col ${color === "cyan" && "bg-cyan"} ${color === "purple" && "bg-purplebg"}`}
+    >
+      <div className=" text-lagoonBlue font-medium text-[22px] leading-6 text-center mb-[37px] ">
+        {header}
+      </div>
       {messages.map(({ avatar, message, position }, i) => (
-        <div key={`${i}-message-${color}`} className={`flex items-center justify-${position === "right" ? "end" : "start"} mb-4`}>
-          {avatar && <img src={avatar} alt="avatar" className="w-12 h-12 rounded-full border border-gray-300 mr-4" />}
-          <div className={`p-2 rounded-xl ${pillBgColor} ${pillTextColor}`}>
+        <div
+          key={`${i}-message-${color}`}
+          className={` flex mb-6 ${position === "right" ? "flex-row-reverse" : ""}`}
+        >
+          <div className=" w-[46px] h-[46px]">
+            {avatar && (
+              <img
+                src={avatar}
+                alt="avatar"
+                className="w-full h-full block overflow-hidden rounded-[23px]"
+              />
+            )}
+          </div>
+          <div
+            className={`py-3 px-5 text-[20px] leading-[22px] rounded-[23px] mx-3 max-w-[300px] text-[#171A1FD8] ${
+              color === "cyan" && position === "right"
+                ? "bg-skyBlue text-white"
+                : color === "purple" && position === "right"
+                  ? "bg-purple text-white"
+                  : position === "left"
+                    ? "bg-white"
+                    : ""
+            }`}
+          >
             {message}
           </div>
         </div>

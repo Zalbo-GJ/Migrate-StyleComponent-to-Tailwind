@@ -10,20 +10,16 @@ const Button = ({
   ...otherProps
 }) => {
   // Determine button classes based on props
-  const buttonClasses = `border ${
-    buttonShape === "square" ? "rounded-md" : "rounded-lg"
+  const buttonClasses = ` ${
+    buttonShape === "square" ? "rounded-[8px]" : "rounded-[1.66667em]"
   } 
-                        ${buttonSize === "small" ? "px-2 py-1" : "px-6 py-3"}
-                        text-base font-large leading-6 
-                         
-                        focus:outline-none focus:ring-2 focus:ring-offset-2 
-                        focus:ring-offset-gray-100 focus:ring-indigo-500`;
+                        ${buttonSize === "small" ? "py-[0.425rem] px-[1em]" : "py-[12px] px-[24px]"}
+                        font-medium text-[18px] leading-6 tracking-[0.5px] cursor-pointer h-min hover:opacity-70 hover:scale-105 transition-all duration-125 ease-in-out`;
 
   // Determine button background and text color based on buttonType
   let backgroundColorClass = "";
   let textColorClass = "";
   let borderColorClass = "";
-  
 
   switch (buttonType) {
     case "ghost":

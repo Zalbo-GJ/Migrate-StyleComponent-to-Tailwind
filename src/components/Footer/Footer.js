@@ -4,34 +4,42 @@ import { withRouter } from "react-router-dom";
 import { isActiveLink } from "../../utils/constants";
 import { footer } from "../../utils/content";
 
-import Link  from "../Link/Link";
-
 const Footer = withRouter(() => {
   return (
-    <footer className="box-border h-16 px-8 bottom-0 fixed w-full bg-background border-t border-footerBorder flex justify-between items-center z-50">
-      <div className="flex">
-        <div className="flex items-center text-gray-500">
-          {footer.innerLinks.map(({ href, text }, i) => (
-            <div key={`innerLink${i}`} className="mr-8">
-              <Link to={href} active={isActiveLink(href)}>
-                {text}
-              </Link>
-            </div>
-          ))}
+    <footer className="box-border border-t border-lightGray h-[55px] py-2 px-[30px] bottom-0 fixed w-full flex bg-white justify-between z-[100]">
+      <div className=" flex my-auto ">
+        <div className=" my-auto mr-[30px] flex text-[14px] font-bold tracking-[0.5px]">
+          <div className=" text-gray">{footer.copyright}</div>
         </div>
-        <div className="flex items-center">
-          <div className="text-gray-500">{footer.copyright}</div>
-        </div>
+        {footer.innerLinks.map(({ href, text }, i) => (
+          <div
+            className=" my-auto mr-[30px] flex text-[14px] font-bold tracking-[0.5px]"
+            key={`innerLink${i}`}
+          >
+            <a
+              href={href}
+              active={isActiveLink(href)}
+              className=" hover:text-primary active:text-primary"
+            >
+              {text}
+            </a>
+          </div>
+        ))}
       </div>
-      <div className="flex items-center">
+      <div className="flex text-[14px] font-bold tracking-[0.5px]">
         {footer.outerImgLinks.map(({ href, text, icon }, i) => (
           <a
+            className=" hover:text-primary active:text-primary"
             rel="noopener noreferrer"
             href={href}
             target="_blank"
             key={`outerLink${i}`}
           >
-            <img src={icon} alt={text} className="h-10 ml-4 cursor-pointer" />
+            <img
+              className=" h-[39px] ml-[10px] cursor-pointer"
+              src={icon}
+              alt={text}
+            />
           </a>
         ))}
       </div>
