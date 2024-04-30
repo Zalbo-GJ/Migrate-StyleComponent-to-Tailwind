@@ -11,10 +11,10 @@ const NavLeftContainer = () => {
           key={`links${i}`}
         >
           <a className=" my-auto " href={"/"}>
-            <div className=" text-[24px] my-auto leading-[46px] text-midLightGray font-normal flex  ">
+            <div className=" text-lg md:text-[24px] my-auto leading-[46px] text-midLightGray font-normal flex  ">
               {icon && (
                 <img
-                  className="mr-[10px] w-[30px] my-2 "
+                  className=" mr-1 md:mr-[10px] md:w-[30px] w-7 my-2 "
                   src={icon.Logo}
                   alt={text}
                 />
