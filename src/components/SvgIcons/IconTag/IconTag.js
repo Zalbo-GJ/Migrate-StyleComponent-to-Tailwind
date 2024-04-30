@@ -30,8 +30,8 @@ const iconsMap = {
 const IconTagComponent = ({ icon, label, iconProps, smaller }) => {
   const Icon = iconsMap[icon];
   const IconTagClass = smaller
-    ? "font-normal text-[18px] leading-7 opacity-80 pr-10 pl-9 relative text-kashmirBlue icons-css-2  "
-    : "flex font-medium icons-css text-[18px] leading-7 opacity-80 pr-10 pl-9 relative text-foregroundPrimary justify-center items-center";
+    ? "font-normal mb-2 md:mb-0 mx-5 md:mx-0 h-[20px] md:h-[28px] md:text-[18px] md:leading-7 opacity-80 md:pr-10 md:pl-9 pl-7 pr-2 relative text-kashmirBlue icons-css-2  "
+    : "flex h-[28px] font-medium icons-css text-[12px] md:text-[18px] md:leading-7 opacity-80 md:pr-10 md:pl-9 pl-7 pr-2 relative text-foregroundPrimary items-center";
 
   return (
     <div className={`  ${IconTagClass}`}>

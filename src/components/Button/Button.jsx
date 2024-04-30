@@ -13,8 +13,8 @@ const Button = ({
   const buttonClasses = ` ${
     buttonShape === "square" ? "rounded-[8px]" : "rounded-[1.66667em]"
   } 
-                        ${buttonSize === "small" ? "py-[0.425rem] px-[1em]" : "py-[12px] px-[24px]"}
-                        font-medium text-[18px] leading-6 tracking-[0.5px] cursor-pointer h-min hover:opacity-70 hover:scale-105 transition-all duration-125 ease-in-out`;
+   ${buttonSize === "small" ? "py-[0.425rem] px-[1em]" : " py-[7px] px-[14px] md:py-[12px] md:px-[24px]"}
+    font-medium text-[18px] leading-6 tracking-[0.5px] cursor-pointer h-min hover:opacity-70 hover:scale-105 transition-all duration-125 ease-in-out`;
 
   // Determine button background and text color based on buttonType
   let backgroundColorClass = "";

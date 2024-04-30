@@ -1,15 +1,17 @@
 const PrivacyPolicy = () => {
   return (
-    <div className=" max-w-[800px] justify-center text-darkGray box-border flex flex-col my-[100px] mx-auto">
+    <div className=" w-[90%]  max-w-[800px] justify-center text-darkGray box-border flex flex-col md:my-[100px] mx-auto mb-24 md:mb-0">
       <div className=" text-center">
-        <h1 className=" text-[3rem] font-bold my-4 ">
+        <h1 className=" text-[36px] md:text-[3rem] font-bold my-4 ">
           Informativa sulla Privacy
         </h1>
-        <h2 className="my-[5px] text-[1.5em] font-bold">
+        <h2 className="my-[5px] text-[24px] md:text-[1.5em] font-bold">
           Entrata in vigore: 30 ottobre 2019
         </h2>
       </div>
-      <h3 className=" text-[24px] font-semibold mt-6 mb-[10px]">Benvenuti!</h3>
+      <h3 className=" text-[20px] md:text-[24px] font-semibold mt-6 mb-[10px]">
+        Benvenuti!
+      </h3>
       <p className=" my-[1em]">
         Abbiamo redatto i presenti Termini di Servizio (di seguito "Termini")
         per farti conoscere le regole che governano il nostro rapporto con te.

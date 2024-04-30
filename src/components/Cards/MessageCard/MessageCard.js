@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const MessageCard = ({ header, messages, color }) => {
   return (
     <div
-      className={`w-[524px] h-[300px] rounded-[32px] flex px-10 justify-center flex-col ${color === "cyan" && "bg-cyan"} ${color === "purple" && "bg-purplebg"}`}
+      className={`md:w-[524px]  h-[300px] rounded-[32px] flex px-5 md:px-10 justify-center flex-col ${color === "cyan" && "bg-cyan"} ${color === "purple" && "bg-purplebg"}`}
     >
-      <div className=" text-lagoonBlue font-medium text-[22px] leading-6 text-center mb-[37px] ">
+      <div className=" text-lagoonBlue font-medium text-lg md:text-[22px] md:leading-6 text-center mb-[37px] ">
         {header}
       </div>
       {messages.map(({ avatar, message, position }, i) => (
